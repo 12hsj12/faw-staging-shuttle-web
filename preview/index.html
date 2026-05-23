@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>一汽绿运 Web 预览</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Microsoft YaHei", Arial, sans-serif; background: #f3f6fb; color: #172033; }
+    .shell { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+    aside { background: #172033; color: white; padding: 24px 18px; }
+    aside strong { display: block; font-size: 22px; margin-bottom: 6px; }
+    aside span { color: #b8c4d8; }
+    nav { display: grid; gap: 8px; margin-top: 28px; }
+    nav a { color: #dbeafe; text-decoration: none; padding: 12px; border-radius: 8px; background: rgba(255,255,255,.08); }
+    main { padding: 28px; display: grid; gap: 20px; }
+    h1 { margin: 0; font-size: 28px; }
+    .muted { color: #64748b; margin-top: 8px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+    .card, .panel { background: white; border: 1px solid #dbe3ef; border-radius: 8px; padding: 18px; }
+    .card span { color: #64748b; font-size: 13px; }
+    .card b { display: block; font-size: 26px; margin-top: 8px; }
+    .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 18px; }
+    .bar-row { display: grid; grid-template-columns: 88px 1fr 36px; gap: 10px; align-items: center; margin: 10px 0; font-size: 14px; }
+    .bar-row div { height: 12px; background: #e2e8f0; border-radius: 99px; overflow: hidden; }
+    .bar-row i { display: block; height: 100%; }
+    .lanes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+    .lane { border: 1px solid #dbe3ef; border-radius: 8px; padding: 14px; background: #fff; }
+    .lane header { display: flex; justify-content: space-between; }
+    .progress { height: 8px; background: #e2e8f0; border-radius: 99px; overflow: hidden; margin: 12px 0; }
+    .progress i { display: block; height: 100%; background: #16a34a; }
+    li { margin: 8px 0; }
+    li span { display: block; color: #64748b; font-size: 13px; }
+    @media (max-width: 820px) { .shell { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <strong>一汽绿运</strong>
+      <span>备车优化展示平台</span>
+      <nav>
+        <a href="#dashboard">首页仪表盘</a>
+        <a href="#lanes">备车道分配</a>
+        <a href="#shuttle">短驳占位说明</a>
+      </nav>
+    </aside>
+    <main>
+      <section id="dashboard">
+        <h1>自动验收预览</h1>
+        <p class="muted">当前页由项目 CSV 模拟数据生成，用于在依赖安装受限时快速呈现 Web 端结果。</p>
+      </section>
+      <section class="grid">
+        <div class="card"><span>待出库整车数量</span><b>72 辆</b></div>
+        <div class="card"><span>已分配整车数量</span><b>72 辆</b></div>
+        <div class="card"><span>未分配整车数量</span><b>0 辆</b></div>
+        <div class="card"><span>已使用备车道</span><b>9 条</b></div>
+        <div class="card"><span>平均利用率</span><b>100%</b></div>
+        <div class="card"><span>同目的地集中度</span><b>36%</b></div>
+        <div class="card"><span>同方向集中度</span><b>81%</b></div>
+        <div class="card"><span>FIFO 违背次数</span><b>46 次</b></div>
+      </section>
+      <section class="charts">
+        <div class="panel"><h2>备车道利用率</h2><div class="bar-row"><span>L01</span><div><i style="width:100%;background:#2563eb"></i></div><b>8</b></div>
+<div class="bar-row"><span>L02</span><div><i style="width:100%;background:#2563eb"></i></div><b>8</b></div>
+<div class="bar-row"><span>L03</span><div><i style="width:100%;background:#2563eb"></i></div><b>8</b></div>
+<div class="bar-row"><span>L04</span><div><i style="width:100%;background:#2563eb"></i></div><b>8</b></div>
+<div class="bar-row"><span>L05</span><div><i style="width:100%;background:#2563eb"></i></div><b>8</b></div>
+<div class="bar-row"><span>L06</span><div><i style="width:100%;background:#2563eb"></i></div><b>8</b></div>
+<div class="bar-row"><span>L07</span><div><i style="width:100%;background:#2563eb"></i></div><b>8</b></div>
+<div class="bar-row"><span>L08</span><div><i style="width:100%;background:#2563eb"></i></div><b>8</b></div>
+<div class="bar-row"><span>L09</span><div><i style="width:100%;background:#2563eb"></i></div><b>8</b></div>
+<div class="bar-row"><span>L10</span><div><i style="width:0%;background:#2563eb"></i></div><b>0</b></div>
+<div class="bar-row"><span>L11</span><div><i style="width:0%;background:#2563eb"></i></div><b>0</b></div>
+<div class="bar-row"><span>L12</span><div><i style="width:0%;background:#2563eb"></i></div><b>0</b></div></div>
+        <div class="panel"><h2>目的地车辆数量分布</h2><div class="bar-row"><span>沈阳</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>长春</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>大连</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>北京</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>天津</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>青岛</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>上海</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>杭州</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>广州</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>深圳</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>武汉</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>长沙</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>成都</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>重庆</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>西安</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>兰州</span><div><i style="width:100%;background:#0f766e"></i></div><b>3</b></div>
+<div class="bar-row"><span>哈尔滨</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>石家庄</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>济南</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>南京</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>厦门</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>南宁</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>郑州</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>南昌</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>昆明</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>贵阳</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>银川</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div>
+<div class="bar-row"><span>乌鲁木齐</span><div><i style="width:66%;background:#0f766e"></i></div><b>2</b></div></div>
+      </section>
+      <section class="panel" id="lanes">
+        <h2>基线规则算法备车道分配与排序</h2>
+        <div class="lanes">
+            <article class="lane">
+              <header><strong>L01</strong><span>8/8 辆</span></header>
+              <div class="progress"><i style="width:100%"></i></div>
+              <ol><li><strong>1. CAR001</strong><span>沈阳 · 东北 · A</span></li><li><strong>2. CAR002</strong><span>沈阳 · 东北 · B</span></li><li><strong>3. CAR057</strong><span>沈阳 · 东北 · B</span></li><li><strong>4. CAR003</strong><span>长春 · 东北 · C</span></li><li><strong>5. CAR004</strong><span>长春 · 东北 · A</span></li><li><strong>6. CAR058</strong><span>长春 · 东北 · C</span></li><li><strong>7. CAR005</strong><span>哈尔滨 · 东北 · D</span></li><li><strong>8. CAR006</strong><span>哈尔滨 · 东北 · E</span></li></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L02</strong><span>8/8 辆</span></header>
+              <div class="progress"><i style="width:100%"></i></div>
+              <ol><li><strong>1. CAR007</strong><span>大连 · 东北 · F</span></li><li><strong>2. CAR008</strong><span>大连 · 东北 · B</span></li><li><strong>3. CAR072</strong><span>大连 · 东北 · E</span></li><li><strong>4. CAR009</strong><span>北京 · 华北 · A</span></li><li><strong>5. CAR010</strong><span>北京 · 华北 · C</span></li><li><strong>6. CAR059</strong><span>北京 · 华北 · D</span></li><li><strong>7. CAR011</strong><span>天津 · 华北 · D</span></li><li><strong>8. CAR012</strong><span>天津 · 华北 · E</span></li></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L03</strong><span>8/8 辆</span></header>
+              <div class="progress"><i style="width:100%"></i></div>
+              <ol><li><strong>1. CAR060</strong><span>天津 · 华北 · E</span></li><li><strong>2. CAR013</strong><span>石家庄 · 华北 · F</span></li><li><strong>3. CAR014</strong><span>石家庄 · 华北 · A</span></li><li><strong>4. CAR015</strong><span>济南 · 华东 · B</span></li><li><strong>5. CAR016</strong><span>济南 · 华东 · C</span></li><li><strong>6. CAR017</strong><span>青岛 · 华东 · D</span></li><li><strong>7. CAR018</strong><span>青岛 · 华东 · E</span></li><li><strong>8. CAR071</strong><span>青岛 · 华东 · D</span></li></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L04</strong><span>8/8 辆</span></header>
+              <div class="progress"><i style="width:100%"></i></div>
+              <ol><li><strong>1. CAR019</strong><span>南京 · 华东 · F</span></li><li><strong>2. CAR020</strong><span>南京 · 华东 · A</span></li><li><strong>3. CAR021</strong><span>上海 · 华东 · B</span></li><li><strong>4. CAR022</strong><span>上海 · 华东 · C</span></li><li><strong>5. CAR061</strong><span>上海 · 华东 · F</span></li><li><strong>6. CAR023</strong><span>杭州 · 华东 · D</span></li><li><strong>7. CAR024</strong><span>杭州 · 华东 · E</span></li><li><strong>8. CAR062</strong><span>杭州 · 华东 · A</span></li></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L05</strong><span>8/8 辆</span></header>
+              <div class="progress"><i style="width:100%"></i></div>
+              <ol><li><strong>1. CAR025</strong><span>广州 · 华南 · F</span></li><li><strong>2. CAR026</strong><span>广州 · 华南 · A</span></li><li><strong>3. CAR063</strong><span>广州 · 华南 · B</span></li><li><strong>4. CAR027</strong><span>深圳 · 华南 · B</span></li><li><strong>5. CAR028</strong><span>深圳 · 华南 · C</span></li><li><strong>6. CAR064</strong><span>深圳 · 华南 · C</span></li><li><strong>7. CAR029</strong><span>厦门 · 华南 · D</span></li><li><strong>8. CAR030</strong><span>厦门 · 华南 · E</span></li></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L06</strong><span>8/8 辆</span></header>
+              <div class="progress"><i style="width:100%"></i></div>
+              <ol><li><strong>1. CAR031</strong><span>南宁 · 华南 · F</span></li><li><strong>2. CAR032</strong><span>南宁 · 华南 · A</span></li><li><strong>3. CAR033</strong><span>武汉 · 华中 · B</span></li><li><strong>4. CAR034</strong><span>武汉 · 华中 · C</span></li><li><strong>5. CAR065</strong><span>武汉 · 华中 · D</span></li><li><strong>6. CAR035</strong><span>长沙 · 华中 · D</span></li><li><strong>7. CAR036</strong><span>长沙 · 华中 · E</span></li><li><strong>8. CAR066</strong><span>长沙 · 华中 · E</span></li></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L07</strong><span>8/8 辆</span></header>
+              <div class="progress"><i style="width:100%"></i></div>
+              <ol><li><strong>1. CAR037</strong><span>郑州 · 华中 · F</span></li><li><strong>2. CAR038</strong><span>郑州 · 华中 · A</span></li><li><strong>3. CAR039</strong><span>南昌 · 华中 · B</span></li><li><strong>4. CAR040</strong><span>南昌 · 华中 · C</span></li><li><strong>5. CAR041</strong><span>成都 · 西南 · D</span></li><li><strong>6. CAR042</strong><span>成都 · 西南 · E</span></li><li><strong>7. CAR067</strong><span>成都 · 西南 · F</span></li><li><strong>8. CAR043</strong><span>重庆 · 西南 · F</span></li></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L08</strong><span>8/8 辆</span></header>
+              <div class="progress"><i style="width:100%"></i></div>
+              <ol><li><strong>1. CAR044</strong><span>重庆 · 西南 · A</span></li><li><strong>2. CAR068</strong><span>重庆 · 西南 · A</span></li><li><strong>3. CAR045</strong><span>昆明 · 西南 · B</span></li><li><strong>4. CAR046</strong><span>昆明 · 西南 · C</span></li><li><strong>5. CAR047</strong><span>贵阳 · 西南 · D</span></li><li><strong>6. CAR048</strong><span>贵阳 · 西南 · E</span></li><li><strong>7. CAR049</strong><span>西安 · 西北 · F</span></li><li><strong>8. CAR050</strong><span>西安 · 西北 · A</span></li></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L09</strong><span>8/8 辆</span></header>
+              <div class="progress"><i style="width:100%"></i></div>
+              <ol><li><strong>1. CAR069</strong><span>西安 · 西北 · B</span></li><li><strong>2. CAR051</strong><span>兰州 · 西北 · B</span></li><li><strong>3. CAR052</strong><span>兰州 · 西北 · C</span></li><li><strong>4. CAR070</strong><span>兰州 · 西北 · C</span></li><li><strong>5. CAR053</strong><span>银川 · 西北 · D</span></li><li><strong>6. CAR054</strong><span>银川 · 西北 · E</span></li><li><strong>7. CAR055</strong><span>乌鲁木齐 · 西北 · F</span></li><li><strong>8. CAR056</strong><span>乌鲁木齐 · 西北 · A</span></li></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L10</strong><span>0/8 辆</span></header>
+              <div class="progress"><i style="width:0%"></i></div>
+              <ol></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L11</strong><span>0/8 辆</span></header>
+              <div class="progress"><i style="width:0%"></i></div>
+              <ol></ol>
+            </article>
+            
+
+            <article class="lane">
+              <header><strong>L12</strong><span>0/8 辆</span></header>
+              <div class="progress"><i style="width:0%"></i></div>
+              <ol></ol>
+            </article>
+            </div>
+      </section>
+      <section class="panel" id="shuttle">
+        <h2>短驳仿真与方案选型</h2>
+        <p>本模块对应案例 16。原比赛方案中曾基于 TruckSim 对不同路况、车型、天气下的短驳方案进行仿真对比。当前版本因原始 TruckSim 文件缺失，不展示具体仿真结果，仅保留方法说明与后续扩展入口。</p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
